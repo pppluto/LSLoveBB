@@ -1,0 +1,104 @@
+//
+//  PrefixHeader.pch
+//  Just_Run
+//
+//  Created by aoyolo on 15/8/18.
+//  Copyright (c) 2015年 aoyolo. All rights reserved.
+//
+
+#ifndef Just_Run_PrefixHeader_pch
+#define Just_Run_PrefixHeader_pch
+
+#import "UIImage+myImage.h"
+
+#define uMengAppKey @"55f24c15e0f55a600c002973"
+
+
+#define MYRGB(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
+#define TopicColor MYRGB(165, 33, 26)
+#define FT(x) [UIFont systemFontOfSize:x]
+#define TopicFont(x) [UIFont fontWithName:@"jLinBo" size:x]
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define SERVER_IP @"http://121.41.25.90"
+//球场
+#define Court_Url @"http://121.41.25.90/review/lbs/SearchBasketballCourt?__client__=android&pageNo=1&city=%E6%B7%B1%E5%9C%B3%E5%B8%82&area=&lat=22.582684&lng=113.870091&pageSize=20"
+#define RecommendCourt_Url @"http://121.41.25.90/review/lbs/GetRecommendCourt?__client__=android"
+
+//教学    0501  末俩位代表索引号 01-14
+#define Teach_Url @"http://121.41.25.90/teach/getTeachVideo.do?__client__=android&pageNo=1&twoCategory=0501&pageSize=20"
+//战术
+#define Statics_Url @"http://121.41.25.90/nbaModule/getLbTactics.do?__client__=android&pageNo=1&pageSize=20"
+//百科
+#define BKBall_Tips_Url @"http://121.41.25.90/nbaModule/getLbBasketballRules.do?__client__=android&pageNo=1&pageSize=20"
+
+//GET
+//联赛
+//细节
+#define matchDetail @"http://121.41.25.90/review/lbnational/GetLBNationalIntroduce?nationalId=2"
+#define newMatch_Url @"http://www.lanqiure.com/review/lbnational/GetLBNationalList?pageNo=1&pageSize=10"
+//赛程 //id 和 status 为修改参数   status 1 为结束 0为为开赛
+#define matchRoute @"http://www.lanqiure.com/review/lbdirect/DirectList?nationalId=2&status=0"
+//资讯
+#define matchInfo @"http://www.lanqiure.com/review/lbnational_news/GetNewsList?nationalId=1&pageNo=1&pageSize=20"
+//场馆
+#define newLOCK_Url @"http://www.lanqiure.com/review/lbs/GetRecommendCourt"
+#define newCourt_Url @"http://www.lanqiure.com/review/lbs/SearchBasketballCourt?area=&city=%E6%B7%B1%E5%9C%B3%E5%B8%82&lat=22.58278&lng=113.8702&pageNo=1&pageSize=20"
+
+
+//POST     pageNo=1&pageSize=10&userId=16724
+#define newMessage1_Url @"http://www.lanqiure.com/review/lbuser/GetLeaveOfUserList"
+#define newUserAgaree_Url @"http://www.lanqiure.com/review/lbuser/GetAgreeOfUserList"
+#define newUserFans_Url @"http://www.lanqiure.com/review/lbuser/GetUserFansList"
+#define nerGet_Url @"http://www.lanqiure.com/review/lbindex/GetIndexAds?pageNo=1&pageSize=5"
+////clickUserId=16724&userId=16724 获取自己的信息
+#define newUserInfo_Url @"http://www.lanqiure.com/review/lbuser/GetUserPageInfo"
+
+#define getToken_Url @"http://www.lanqiure.com/review/lbutilaction/GetQiNiuToken"
+//remoteAddr @"www.lanqiure.com/121.41.25.90"
+
+//提交表单
+#define updateUserInfo_Url @"http://www.lanqiure.com/review/lbuser/UpdateUserInfo"
+
+static NSString *loginP = @"thirdId=3188175924&thirdType=2";
+#define newLogin_Url @"http://www.lanqiure.com/review/lbuser/UseThirdlogin"
+
+//关注
+static NSString *focusP = @"pageNo=1&pageSize=10&userId=16724";
+#define newFocus_Url @"http://www.lanqiure.com/review/lbuser/FocusUsersDynamic"
+//细节
+static NSString *detailP= @"dynamicId=7335";
+#define newDetail_Url @"http://www.lanqiure.com/review/lbdynamic/DynamicDetail"
+//热门 参数
+static NSString *hotP = @"pageNo=1&pageSize=10";
+#define newHot_Url @"http://www.lanqiure.com/review/lbuser/HotUsersDynamic"
+//最新 参数
+static NSString *newP = @"pageNo=1&pageSize=10";
+#define mostNew_Url @"http://www.lanqiure.com/review/lbuser/LastDynamicList"
+//评论  回复1 成功   post 请求参数
+static NSString *addLeaveP = @"dynamicId=7335&leaveContent=%E9%9C%B8%E6%B0%94&replyUserId=2900&userId=16724"; // content后为评论内容 需转码
+#define addLeave_Url @"http://www.lanqiure.com/review/lbdynamicleave/AddDynamicLeave"
+static NSString *addReplyLeaveP = @"dynamicId=7402&leaveContent=6&replyLeaveId=10835&replyUserId=3856&userId=26146";
+
+//鸟哥 ID 26146
+//点赞 参数
+static NSString *addLikeP = @"dynamicId=7336&replyUserId=17005&userId=16724";// 返回1成功
+#define addLike_Url @"http://www.lanqiure.com/review/lbdynamicagree/AddDinamicAgree"
+//点击头像获得用户信息 参数
+static NSString *userInfoP = @"clickUserId=14910&userId=16724";
+#define getUserInfo_Url @"http://www.lanqiure.com/review/lbuser/GetUserPageInfo"
+
+//添加关注  para = focusUserId=12317&userId=16724
+#define addFocus_Url @"http://www.lanqiure.com/review/lbuser/AddFocusOfOne"
+
+//获取用户动态列表 para = pageNo=1&pageSize=15&userId=3856
+#define getUserDynamics_Url @"http://www.lanqiure.com/review/lbuser/GetUserDynamicsList"
+
+//获得用户关注 para = pageNo=1&pageSize=20&userId=3856
+#define getUserFocus_Url @"http://www.lanqiure.com/review/lbuser/GetUserFocusList"
+
+// para : tagName=.....
+#define getTag_Url @"http://www.lanqiure.com/review/lbdynamic/DynamicListByTagName?pageNo=1&pageSize=10&tagName=%E8%A3%85%E5%A4%87"
+#endif

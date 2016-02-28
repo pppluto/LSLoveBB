@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2043" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="myFont.ttf">
+            <string>JLinBo</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="MatchDetailNewsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gom-uR-jbc">
+                        <rect key="frame" x="8" y="5" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="a6V-0K-dhc"/>
+                            <constraint firstAttribute="width" constant="70" id="bFd-dM-f8l"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvB-aO-Mh7">
+                        <rect key="frame" x="86" y="30" width="226" height="17"/>
+                        <fontDescription key="fontDescription" name="JLinBo" family="迷你简凌波" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dvB-aO-Mh7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="8j2-0P-U0C"/>
+                    <constraint firstItem="dvB-aO-Mh7" firstAttribute="leading" secondItem="gom-uR-jbc" secondAttribute="trailing" constant="8" id="AKB-yB-wca"/>
+                    <constraint firstItem="gom-uR-jbc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="FwD-qL-Kfw"/>
+                    <constraint firstItem="gom-uR-jbc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="V15-IM-CN5"/>
+                    <constraint firstAttribute="trailing" secondItem="dvB-aO-Mh7" secondAttribute="trailing" constant="8" id="ySj-oL-Ehz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgView" destination="gom-uR-jbc" id="XHq-Fj-QCn"/>
+                <outlet property="nameLabel" destination="dvB-aO-Mh7" id="6mx-Zb-fzu"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="165"/>
+        </tableViewCell>
+    </objects>
+</document>
